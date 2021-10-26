@@ -8,7 +8,7 @@ export default function Header() {
         <TouchableOpacity>
           <Image
             style={styles.logo}
-            source={require("../assets/Instagram-Logo.png")}
+            source={require("../../assets/Instagram-Logo.png")}
             // source={require("../assets/header-logo.png")}
           />
         </TouchableOpacity>

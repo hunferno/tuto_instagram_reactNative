@@ -1,15 +1,20 @@
 import React from "react";
-import { View, Text, StyleSheet, SafeAreaView } from "react-native";
-import Header from "../components/Header";
-import Post from "../components/Post";
-import Stories from "../components/Stories";
+import { View, Text, StyleSheet, SafeAreaView, ScrollView } from "react-native";
+import Header from "../components/home/Header";
+import Post from "../components/home/Post";
+import Stories from "../components/home/Stories";
+import { POSTS } from "../datas/Posts";
 
 export default function Home() {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
       <Stories />
-      <Post />
+      <ScrollView>
+        {POSTS.map((post) => (
+          <Post post={post} />
+        ))}
+      </ScrollView>
     </SafeAreaView>
   );
 }
