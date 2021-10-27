@@ -1,9 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './screens/Home';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import Home from "./screens/Home";
 
 export default function App() {
   return (
-    <Home/>
-  )}
+    <SafeAreaView style={styles.container}>
+      <Home />
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "black",
+  },
+});

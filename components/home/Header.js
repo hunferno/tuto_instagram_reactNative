@@ -9,7 +9,6 @@ export default function Header() {
           <Image
             style={styles.logo}
             source={require("../../assets/Instagram-Logo.png")}
-            // source={require("../assets/header-logo.png")}
           />
         </TouchableOpacity>
       </View>

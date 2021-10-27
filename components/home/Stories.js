@@ -37,7 +37,7 @@ export default function Stories() {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 15,
-    marginBottom:20
+    marginBottom:15
   },
 
   storiesContainer: {

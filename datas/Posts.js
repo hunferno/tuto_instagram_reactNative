@@ -5,7 +5,8 @@ export const POSTS = [
     imageUrl: "https://i.ibb.co/182bP1y/4k.png",
     user: USERS[0].name,
     likes: 7870,
-    caption: "Tarin Ride to Hogwarts.",
+    caption:
+      "Tomorrow we'll build a Netflixapp with ReactJs. That'll be awesome!!!",
     profile_picture: USERS[0].img,
     comments: [
       {
