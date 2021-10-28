@@ -8,7 +8,7 @@ import { POSTS } from "../datas/Posts";
 
 export default function Home() {
   return (
-    <View>
+    <SafeAreaView style={styles.container}>
       <Header />
       <Stories />
       <ScrollView showsVerticalScrollIndicator={false}>
@@ -17,6 +17,13 @@ export default function Home() {
         ))}
       </ScrollView>
       <BottomTabs />
-    </View>
+    </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "black",
+  },
+});
