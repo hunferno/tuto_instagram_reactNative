@@ -41,13 +41,9 @@ export default function BottomTabs() {
   return (
     <View
       style={{
-        position: "absolute",
-        bottom: "1%",
         width: "100%",
         backgroundColor: "black",
         zIndex: 999,
-        // borderWidth: 1,
-        // borderColor: "white",
       }}
     >
       <Divider width={1} orientation="vertical" />
@@ -63,12 +59,17 @@ export default function BottomTabs() {
         {bottomTabIcons.map((icon, index) => (
           <TouchableOpacity key={index} onPress={() => setActivetab(icon.name)}>
             <Image
-              source={activeTab === icon.name ? icon.active : icon.inactive}
-              // style={{  }}
+              source={
+                activeTab === icon.name
+                  ? { uri: icon.active }
+                  : { uri: icon.inactive }
+              }
               style={[
                 styles.communStyle,
                 icon.name === "Profile" ? styles.profilePic : null,
-                icon.name === "Profile" && activeTab === "Profile" ? styles.selectedprofilePic : null,
+                icon.name === "Profile" && activeTab === "Profile"
+                  ? styles.selectedprofilePic
+                  : null,
               ]}
             />
           </TouchableOpacity>

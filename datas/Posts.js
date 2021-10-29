@@ -2,7 +2,7 @@ import { USERS } from "./Users";
 
 export const POSTS = [
   {
-    imageUrl: "https://i.ibb.co/182bP1y/4k.png",
+    imageUrl: "https://randomuser.me/api/portraits/women/33.jpg",
     user: USERS[0].name,
     likes: 7870,
     caption:
@@ -20,7 +20,7 @@ export const POSTS = [
     ],
   },
   {
-    imageUrl: "https://i.ibb.co/183bP1y/4k.png",
+    imageUrl: "https://randomuser.me/api/portraits/men/49.jpg",
     user: USERS[1].name,
     likes: 7870,
     caption: "Tarin Ride to Hogwarts.",

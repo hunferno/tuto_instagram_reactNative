@@ -114,7 +114,7 @@ const PostFooter = () => (
 );
 
 const Likes = ({ likes }) => (
-  <Text style={{ color: "white", fontWeight: 600, fontStyle: "italic" }}>
+  <Text style={{ color: "white", fontWeight: "600", fontStyle: "italic" }}>
     {likes.toLocaleString()} likes
   </Text>
 );
@@ -122,7 +122,9 @@ const Likes = ({ likes }) => (
 const Caption = ({ post }) => (
   <View style={{ marginTop: 5 }}>
     <Text style={{ color: "white" }}>
-      <Text style={{ fontWeight: 600, fontStyle: "italic" }}>{post.user}</Text>
+      <Text style={{ fontWeight: "700", fontStyle: "italic" }}>
+        {post.user}
+      </Text>
       <Text> {post.caption}</Text>
     </Text>
   </View>
@@ -141,9 +143,9 @@ const CommentsSection = ({ post }) => (
 
 const Comments = ({ post }) => (
   <>
-    {post.comments.map((comment) => (
-      <Text style={{ color: "white" }}>
-        <Text style={{ fontWeight: 600, fontStyle: "italic" }}>
+    {post.comments.map((comment, index) => (
+      <Text key={index} style={{ color: "white" }}>
+        <Text style={{ fontWeight: "700", fontStyle: "italic" }}>
           {comment.user}
         </Text>
         <Text> {comment.comment}</Text>
@@ -168,8 +170,8 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     resizeMode: "contain",
-    borderColor: "orange",
-    borderRadius: 15,
+    // borderColor: "orange",
+    borderRadius: 20,
     borderWidth: 1.6,
     marginHorizontal: 5,
   },

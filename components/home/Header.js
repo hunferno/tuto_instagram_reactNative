@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 
-export default function Header() {
+export default function Header({ navigation }) {
   return (
     <View style={styles.container}>
       <View>
@@ -13,7 +13,7 @@ export default function Header() {
         </TouchableOpacity>
       </View>
       <View style={styles.iconsBlock}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.push("NewPost")}>
           <Image
             style={styles.icon}
             source={{

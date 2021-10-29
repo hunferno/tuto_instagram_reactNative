@@ -37,7 +37,7 @@ export default function Stories() {
 const styles = StyleSheet.create({
   container: {
     marginHorizontal: 15,
-    marginBottom:15
+    marginBottom: 15,
   },
 
   storiesContainer: {
@@ -48,10 +48,10 @@ const styles = StyleSheet.create({
   storieImg: {
     width: 60,
     height: 60,
-    borderRadius: 30,
     resizeMode: "contain",
-    borderColor: "orange",
     borderWidth: 2,
+    borderRadius: 30,
+    // borderColor: "orange",
   },
   storieText: {
     color: "white",

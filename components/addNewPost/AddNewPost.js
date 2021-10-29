@@ -1,15 +1,15 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
-export default function AddNewPost() {
+export default function AddNewPost({ navigation }) {
   return (
     <View style={{ marginHorizontal: 20 }}>
-      <HeaderNewPost />
+      <HeaderNewPost navigation={navigation} />
     </View>
   );
 }
 
-const HeaderNewPost = () => (
+const HeaderNewPost = ({ navigation }) => (
   <View
     style={{
       flexDirection: "row",
@@ -17,7 +17,7 @@ const HeaderNewPost = () => (
       alignItems: "center",
     }}
   >
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.goBack()}>
       <Image
         style={{ width: 30, height: 30 }}
         source={{ uri: "https://img.icons8.com/ios-glyphs/90/ffffff/back.png" }}
